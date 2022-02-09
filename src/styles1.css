@@ -1,0 +1,111 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.drum-machine {
+  font-family: Russo One;
+  text-align: center;
+}
+
+body {
+  background-color: #808080;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.display {
+  background-color: #d3d3d3;
+  border: 4px solid orange;
+  width: 600px;
+}
+
+#box-display {
+  display: flex;
+  flex-wrap: wrap;
+  width: 360px;
+  float: left;
+}
+
+#switch-display {
+  display: flex;
+  flex-wrap: wrap;
+  float: right;
+  display: inline;
+}
+
+.drum-pad {
+  display: flex;
+  background-color: #808080;
+  border-radius: 4px;
+  margin: 10px;
+  height: 100px;
+  width: 100px;
+  box-shadow: 3px 3px 5px;
+  align-items: center;
+  justify-content: center;
+  font-size: 150%;
+  font-family: Russo One;
+}
+
+.drum-pad:hover {
+  cursor: pointer;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: black;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.rounded {
+  border-radius: 34px;
+}
+
+.slider.rounded:before {
+  border-radius: 50%;
+}
